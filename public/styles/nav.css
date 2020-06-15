@@ -1,0 +1,32 @@
+nav {
+  background: #c50d72;
+  height: 120px;
+  width: 100%;
+  color: #ffffff;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../images/inspiration-geometry.png");
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
+
+strong {
+  margin-right: 0.3em;
+  color: rgb(0, 255, 170);
+  font-weight: 700;
+}
+
+.logo {
+  font-family: "Bungee", sans-serif;
+}
+
+.tagline {
+  font-size: 1em;
+  color: yellow;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
+}
