@@ -21,6 +21,7 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/160f8d67bf.js" crossorigin="anonymous"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -33,23 +34,23 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="logo">tweeter</span>
-    <span class="tagline"><strong>Write</strong> a new tweet<br><i class="fas fa-angle-down"></i></span>
+    <span class="tagline"><a href="#writeANewTweet"><strong>Write</strong> a new tweet<br><i id="headerIcon" class="fas fa-angle-double-down mr-3"></i></a></span>
   </nav>
 
   <header class="profile">
     <div>
-      <img src="/images/profile-hex.png" alt="" width="175px" height="175px">
+      <img src="/images/profile-hex.png" alt="profile picture" width="175px" height="175px">
     </div>
     <br>
     <div>
       <h2><strong>Leona</strong> Kim</h2>
     </div>
+    <a name="writeANewTweet"></a>
   </header>
 
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-
     <section class="new-tweet">
       <form action="/tweets/" method="POST">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -81,7 +82,15 @@
             10 days ago
           </span>
           <span>
-            social icons
+            <!-- <i class="icons far fa-flag"></i> -->
+            <i class="icons fas fa-flag"></i>
+
+            <!-- <i class="icons fas fa-circle-notch"></i> -->
+            <!-- <i class="icons fas fa-circle"></i> -->
+            <i class="icons fas fa-reply"></i>
+
+            <!-- <i class="icons far fa-heart"></i> -->
+            <i class="icons fas fa-heart"></i>
           </span>
         </footer>
 

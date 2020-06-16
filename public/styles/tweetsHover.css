@@ -65,6 +65,11 @@ footer {
   opacity: 33%;
 }
 
+.icons {
+  margin: 0 4px;
+  color: #545149;
+}
+
 hr {
   display: block;
   border: 0;
@@ -75,6 +80,7 @@ hr {
 
 article:hover {
   box-shadow: 5px 5px #755d96;
+  /* box-shadow: 5px 5px yellow; */
 }
 
 article:hover header {
@@ -91,4 +97,14 @@ article:hover p {
 
 article:hover footer {
   opacity: 100%;
+}
+
+article:hover .icons {
+  margin: 0 4px;
+  color: rgb(69, 212, 134);
+}
+
+article:hover hr {
+  background-color: yellow;
+  /* background-color: #755d96; */
 }
