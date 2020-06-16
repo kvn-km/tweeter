@@ -31,16 +31,14 @@ h2 {
 
 #tweet-text {
   height: 1.8em;
-  border-width: 0;
-  border-bottom-width: 3px;
-  border-style: solid;
+  border-width: 0px 0px 3px 0px;
   margin: 1em 0;
   border-color: #545149;
   resize: none;
   background: transparent;
   font-size: 1em;
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   color: #c50d72;
   outline: none;
 }
