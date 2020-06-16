@@ -19,7 +19,7 @@ h2 {
 
 .new-tweet strong {
   font-weight: 700;
-  color: #310e5e;
+  color: #3b235c;
   font-size: 1em;
 }
 
@@ -36,10 +36,10 @@ h2 {
   border-color: #545149;
   resize: none;
   background: transparent;
-  font-size: 1em;
+  font-size: 0.88em;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  color: #c50d72;
+  color: #ce4590;
   outline: none;
 }
 
@@ -51,12 +51,13 @@ h2 {
 }
 
 button {
-  background-color: rgb(0, 255, 170);
+  background-color: rgb(69, 212, 134);
   border: 0;
-  color: #310e5e;
+  color: white;
   font-size: 0.75em;
 }
 
 button:hover {
   background-color: yellow;
+  color: #3b235c;
 }

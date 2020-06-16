@@ -1,5 +1,5 @@
 nav {
-  background: #c50d72;
+  background: #ce4590;
   height: 120px;
   width: 100%;
   color: #ffffff;
@@ -16,8 +16,8 @@ span {
 
 strong {
   margin-right: 0.3em;
-  color: rgb(0, 255, 170);
-  font-weight: 700;
+  color: rgb(69, 212, 134);
+  font-weight: 600;
 }
 
 .logo {

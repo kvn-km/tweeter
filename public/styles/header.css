@@ -1,13 +1,13 @@
-header {
+.profile {
   height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #310e5e;
+  background-color: #3b235c;
   background-image: url("../images/inspiration-geometry.png");
-  color: rgb(0, 255, 170);
+  color: rgb(69, 212, 134);
 }
 
 h2 {
@@ -19,6 +19,6 @@ h2 {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 600;
   /* margin-left: -0.15em; */
 }
