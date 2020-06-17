@@ -44,19 +44,47 @@ $(document).ready(() => {
       let months = (date / (1000 * 60 * 60 * 24 * 30)).toFixed(1);
       let years = (date / (1000 * 60 * 60 * 24 * 365)).toFixed(1);
       if (seconds < 60) {
-        return `${seconds} seconds ago`;
+        if (seconds === 1.0) {
+          return `1 second ago`;
+        } else {
+          return `${seconds} seconds ago`;
+        }
       } else if (minutes < 60) {
-        return `${minutes} minutes ago`;
+        if (minutes === 1.0) {
+          return `1 minute ago`;
+        } else {
+          return `${minutes} minutes ago`;
+        }
       } else if (hours < 24) {
-        return `${hours} hours ago`;
+        if (hours === 1.0) {
+          return `1 hour ago`;
+        } else {
+          return `${hours} hours ago`;
+        }
       } else if (days < 7) {
-        return `${days} days ago`;
+        if (days === 1.0) {
+          return `1 day ago`;
+        } else {
+          return `${days} days ago`;
+        }
       } else if (weeks < 5) {
-        return `${weeks} weeks ago`;
+        if (weeks === 1.0) {
+          return `1 week ago`;
+        } else {
+          return `${weeks} weeks ago`;
+        }
       } else if (months < 12) {
-        return `${months} months ago`;
+        if (months === 1.0) {
+          return `1 month ago`;
+        } else {
+          return `${months} months ago`;
+        }
       } else {
-        return `${years} years ago`;
+        if (years === 1.0) {
+          return `1 year ago`;
+        } else {
+          return `${years} years ago`;
+        }
       }
     }
 
@@ -119,17 +147,32 @@ $(document).ready(() => {
   const renderTweets = (tweetsDB, targetElement) => {
     for (const tweet of tweetsDB) {
       $(targetElement).prepend(createTweet(tweet));
-    }
+    };
   };
 
-  renderTweets(tweetsDB, "#all_tweets");
+  $.get("/tweets")
+    .then(response => { renderTweets(response, "#all_tweets"); })
+    .fail(error => { console.log("Initial GET Fail", error); });
 
-  $.get("/tweets/")
-    .then(res => renderTweet(res, "/tweets/")) // res = get response
-    .fail(console.log("GET Tweets/tweet FAIL"));
+  $("form").submit(() => {
+    event.preventDefault();
+    $.post("/tweets/", $("form").serialize())
+      .then(
+        $.get("/tweets")
+          .then(response => { renderTweets(response, "#all_tweets"); })
+          .fail(error => { console.log("GET after POST Fail", error); })
+      )
+      .then($(event.target)[0].reset()
+      )
+      .fail(error => { console.log("POST Fail", error); }
+      );
+  });
 
 
 
+
+
+  // $("#more_tweets").click();
   // $("form").serialize();
   // or some sort of syntax like that, will take a form data and make it into string for data transfer, andthen will parse to json auto.
 

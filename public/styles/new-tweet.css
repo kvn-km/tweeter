@@ -55,9 +55,14 @@ button {
   border: 0;
   color: white;
   font-size: 0.75em;
+  font-family: "Bungee", sans-serif;
 }
 
 button:hover {
   background-color: yellow;
   color: #3b235c;
+}
+
+#more_tweets {
+  width: 150px;
 }
