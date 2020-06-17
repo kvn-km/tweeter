@@ -4,32 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const tweetsDB = [
-  {
-    "user": {
-      "name": "Sailor Moon",
-      "avatars": "https://i.imgur.com/z5LNkkB.png",
-      "handle": "@SailorMoon"
-    },
-    "content": {
-      "text": "Fighting evil by moonlight, winning love by daylight, never running from a real fight, she is the one named Sailor Moon!"
-    },
-    "created_at": Date.now()
-  },
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  }];
-
 $(document).ready(() => {
-  console.log("Yo.");
+  console.log("Yo. Doc's Ready!");
+
+  $(".logo").on("click", function() {
+    $(window).scrollTop(0);
+  });
+
 
   function createTweet(tweet) {
     let dateCreatedAt = tweet.created_at;
@@ -150,32 +131,39 @@ $(document).ready(() => {
     };
   };
 
-  $.get("/tweets")
-    .then(response => { renderTweets(response, "#all_tweets"); })
-    .fail(error => { console.log("Initial GET Fail", error); });
+  function getTweets() {
+    return $.get("/tweets");
+  }
 
-  $("form").submit(() => {
+  $("form").submit(function() {
     event.preventDefault();
-    $.post("/tweets/", $("form").serialize())
+    let theTweet = $(this).serialize();
+    $.post("/tweets/", theTweet)
       .then(
-        $.get("/tweets")
-          .then(response => { renderTweets(response, "#all_tweets"); })
-          .fail(error => { console.log("GET after POST Fail", error); })
-      )
-      .then($(event.target)[0].reset()
-      )
-      .fail(error => { console.log("POST Fail", error); }
+        function() {
+          getTweets()
+            .then((tweets) => {
+              $("#tweet_text").val("");
+              $("#all_tweets").empty();
+              renderTweets(tweets, "#all_tweets");
+            });
+        },
+        function(err) {
+          console.error("POST FAIL", error);
+        }
       );
   });
 
+  getTweets()
+    .then(response => { renderTweets(response, "#all_tweets"); })
+    .fail(error => { console.log("Initial GET Fail", error); });
 
 
 
 
 
 
-  // $("#more_tweets").click();
-  // $("form").serialize();
-  // or some sort of syntax like that, will take a form data and make it into string for data transfer, andthen will parse to json auto.
+
+
 
 });

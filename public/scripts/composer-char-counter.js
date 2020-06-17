@@ -1,13 +1,5 @@
 $(document).ready(function() {
-  console.log("hello console!");
-
-  $(".logo").on("click", function() {
-    $(window).scrollTop(0);
-  });
-
-
-
-
+  console.log("Yo. Counter's Ready!");
 
   // Character counter
   let maxChars = 140;
@@ -24,6 +16,5 @@ $(document).ready(function() {
       counter.val(maxChars - charLength);
     }
   });
-
 
 });
