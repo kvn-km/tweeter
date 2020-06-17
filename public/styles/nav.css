@@ -36,7 +36,7 @@ strong {
   height: 25px;
 }
 
-.tagline:hover #headerIcon {
+.tagline:hover #header_icon {
   margin-top: 5px;
 }
 
@@ -49,6 +49,6 @@ a {
   font-weight: 100;
 }
 
-#headerIcon {
+#header_icon {
   padding-left: 20px;
 }

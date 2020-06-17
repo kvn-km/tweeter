@@ -1,4 +1,4 @@
-.new-tweet {
+.new_tweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,19 +17,19 @@ h2 {
   color: yellow;
 }
 
-.new-tweet strong {
+.new_tweet strong {
   font-weight: 700;
   color: #3b235c;
   font-size: 1em;
 }
 
-[for="tweet-text"] {
+[for="tweet_text"] {
   color: #545149;
   font-size: 0.75em;
   font-weight: 600;
 }
 
-#tweet-text {
+#tweet_text {
   height: 1.5em;
   border-width: 0px 0px 3px 0px;
   margin: 1em 0;
@@ -43,7 +43,7 @@ h2 {
   outline: none;
 }
 
-.new-tweet div {
+.new_tweet div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
