@@ -1,26 +1,29 @@
 $(document).ready(function() {
-  // NOTE: $.each(arr, (index, arrObj) => {}) is a jQuery style loop
-  console.log("hello there");
+  console.log("hello console!");
 
-  let totalChars = 140;
-  let charLength = 0;
+  $(".logo").on("click", function() {
+    $(window).scrollTop(0);
+  });
+
+
+
 
 
   // Character counter
+  let maxChars = 140;
+  let charLength = 0;
   $("#tweet-text").on("input", function() {
-    charLength = $(this).val().length; // element.target, instead of 'this', can be used
-    let counter = $("output.counter");
-    counter.html(totalChars - charLength);
+    charLength = $(this).val().length;
+    let parentSection = $(this).closest("section");
+    let counter = parentSection.find(".counter");
     if (charLength <= 140) {
-      counter.replaceWith(`<output name="counter" class="counter" for="tweet-text">${totalChars - charLength}</output>`);
+      counter.css({ "color": "#545149" });
+      counter.val(maxChars - charLength);
     } else {
-      counter.replaceWith(`<output name="counter" class="counter" for="tweet-text" style="color:#ce4590">${totalChars - charLength}</output>`);
+      counter.css({ "color": "#ce4590" });
+      counter.val(maxChars - charLength);
     }
   });
-
-  // Create Tweets
-
-
 
 
 });
