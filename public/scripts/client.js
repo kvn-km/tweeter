@@ -124,32 +124,11 @@ $(document).ready(() => {
 
   renderTweets(tweetsDB, "#all_tweets");
 
-  // $.get("/tweets/")
-  //   .then(res => renderTweet(res, "#all_tweets")) // res = get response
-  //   .fail(console.log("GET Tweets/tweet FAIL"));
+  $.get("/tweets/")
+    .then(res => renderTweet(res, "/tweets/")) // res = get response
+    .fail(console.log("GET Tweets/tweet FAIL"));
 
 
-
-
-
-
-
-  // date
-
-  // Date.now()
-
-  // const $tweet = $(`<article class="tweet">Hello world</article>`);
-  // const $tweet = createTweetElement(tweetData);
-
-  // Test / driver code
-
-  // console.log($tweet); // to see what it looks like
-
-  // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-
-
-
-  // remember:
 
   // $("form").serialize();
   // or some sort of syntax like that, will take a form data and make it into string for data transfer, andthen will parse to json auto.
