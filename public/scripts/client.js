@@ -135,23 +135,29 @@ $(document).ready(() => {
     return $.get("/tweets");
   }
 
+
   $("form").submit(function() {
     event.preventDefault();
-    let theTweet = $(this).serialize();
-    $.post("/tweets/", theTweet)
-      .then(
-        function() {
-          getTweets()
-            .then((tweets) => {
-              $("#tweet_text").val("");
-              $("#all_tweets").empty();
-              renderTweets(tweets, "#all_tweets");
-            });
-        },
-        function(err) {
-          console.error("POST FAIL", error);
-        }
-      );
+    let tweetTextSample = $("#tweet_text").val();
+    if (tweetTextSample.length > 140) {
+      $("[type=submit]").click(alert("too many characters"));
+    } else if (tweetTextSample.length > 0 && tweetTextSample.length <= 140) {
+      let theTweet = $(this).serialize();
+      $.post("/tweets/", theTweet)
+        .then(
+          function() {
+            getTweets()
+              .then((tweets) => {
+                $("#tweet_text").val("");
+                $("#all_tweets").empty();
+                renderTweets(tweets, "#all_tweets");
+              });
+          },
+          function(err) {
+            console.error("POST FAIL", error);
+          }
+        );
+    }
   });
 
   getTweets()

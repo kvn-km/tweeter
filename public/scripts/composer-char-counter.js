@@ -4,7 +4,7 @@ $(document).ready(function() {
   // Character counter
   let maxChars = 140;
   let charLength = 0;
-  $("#tweet-text").on("input", function() {
+  $("#tweet_text").on("input", function() {
     charLength = $(this).val().length;
     let parentSection = $(this).closest("section");
     let counter = parentSection.find(".counter");

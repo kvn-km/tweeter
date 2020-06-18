@@ -16,6 +16,9 @@ article {
   font-size: 0.75em;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 article header {
