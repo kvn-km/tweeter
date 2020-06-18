@@ -41,7 +41,7 @@
   <header class="profile">
     <div>
       <a name="writeANewTweet"></a>
-      <img src="/images/oooo.plus_115.png" alt="profile picture" width="175px" height="175px">
+      <img class="main_profile_pic" src="/images/oooo.plus_115.png" alt="profile picture" width="175px" height="175px">
     </div>
     <br>
     <div>
@@ -49,15 +49,17 @@
     </div>
   </header>
 
-
   <!-- Page-specific (main) content here -->
   <main class="container">
 
     <section class="new_tweet">
       <form action="/tweets/" method="POST">
         <textarea name="text" id="tweet_text" placeholder="What are you humming about?"></textarea>
-        <div class="submit-tweet">
-          <button type="submit">Tweet</button>
+        <div class="submit_tweet">
+          <span>
+            <button type="submit">Tweet</button>
+            <span id="errorMSG">Take a chill pill!</span>
+          </span>
           <output name="counter" class="counter" for="tweet_text">140</output>
         </div>
       </form>
@@ -75,8 +77,6 @@
       <!-- <i class="icons fas fa-heart"></i> -->
       <!-- </span> -->
     </section>
-
-
 
   </main>
 </body>

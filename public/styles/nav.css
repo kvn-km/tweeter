@@ -36,10 +36,6 @@ strong {
   height: 25px;
 }
 
-.tagline:hover #header_icon {
-  margin-top: 5px;
-}
-
 a {
   height: 0;
   text-decoration: none;
@@ -51,4 +47,9 @@ a {
 
 #header_icon {
   padding-left: 20px;
+  transition: margin-top 0.5s;
+}
+
+.tagline:hover #header_icon {
+  margin-top: 10px;
 }

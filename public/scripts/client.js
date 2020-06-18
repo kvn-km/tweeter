@@ -11,7 +11,6 @@ $(document).ready(() => {
     $(window).scrollTop(0);
   });
 
-
   function createTweet(tweet) {
     let dateCreatedAt = tweet.created_at;
     let dateRightNow = Date.now();
@@ -135,12 +134,11 @@ $(document).ready(() => {
     return $.get("/tweets");
   }
 
-
   $("form").submit(function() {
     event.preventDefault();
     let tweetTextSample = $("#tweet_text").val();
     if (tweetTextSample.length > 140) {
-      $("[type=submit]").click(alert("too many characters"));
+      $("[id=errorMSG]").animate({ "margin-left": "15px", "opacity": "100" });
     } else if (tweetTextSample.length > 0 && tweetTextSample.length <= 140) {
       let theTweet = $(this).serialize();
       $.post("/tweets/", theTweet)
@@ -164,8 +162,9 @@ $(document).ready(() => {
     .then(response => { renderTweets(response, "#all_tweets"); })
     .fail(error => { console.log("Initial GET Fail", error); });
 
-
-
+  $("[id=tweet_text]").on("input", function() {
+    $("[id=errorMSG]").animate({ "margin-left": "120px", "opacity": "0" });
+  });
 
 
 

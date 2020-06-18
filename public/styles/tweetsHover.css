@@ -19,6 +19,8 @@ article {
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+  transition: opacity 0.25s;
+  transition: box-shadow 0.25s;
 }
 
 article header {
@@ -26,10 +28,12 @@ article header {
   flex-direction: row;
   justify-content: space-between;
   opacity: 33%;
+  transition: opacity 0.25s;
 }
 
 article img {
   margin-right: 10px;
+  transition: opacity 0.25s;
 }
 
 h3 {
@@ -38,6 +42,7 @@ h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   color: #545149;
+  transition: opacity 0.25s;
 }
 
 h4 {
@@ -47,6 +52,7 @@ h4 {
   font-weight: 600;
   color: #ce4590;
   opacity: 0%;
+  transition: opacity 0.5s;
 }
 
 article p {
@@ -54,6 +60,7 @@ article p {
   font-weight: 600;
   color: #545149;
   opacity: 33%;
+  transition: opacity 0.25s;
 }
 
 footer {
@@ -66,11 +73,14 @@ footer {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   opacity: 33%;
+  transition: opacity 0.25s;
 }
 
 .icons {
   margin: 0 4px;
   color: #545149;
+  transition: color 0.25s;
+  transition: opacity 0.25s;
 }
 
 hr {
@@ -79,6 +89,7 @@ hr {
   height: 3px;
   margin: 0;
   background-color: #545149;
+  transition: color 0.25s;
 }
 
 article:hover {

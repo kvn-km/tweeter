@@ -50,12 +50,18 @@ h2 {
   font-family: "Bungee", sans-serif;
 }
 
+.submit_tweet {
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   background-color: rgb(69, 212, 134);
   border: 0;
   color: white;
   font-size: 0.75em;
   font-family: "Bungee", sans-serif;
+  transition: color 0.5s;
 }
 
 button:hover {
@@ -63,6 +69,28 @@ button:hover {
   color: #3b235c;
 }
 
+button:active {
+  background-color: #ce4590;
+  color: white;
+  outline: none;
+  border: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
 #more_tweets {
   width: 150px;
+}
+
+#errorMSG {
+  color: #ce4590;
+  border: 0;
+  padding: 1px 6px;
+  margin-left: 120px;
+  font-size: 0.75em;
+  font-family: "Bungee", sans-serif;
+  opacity: 0;
+  /* display: none; */
 }
