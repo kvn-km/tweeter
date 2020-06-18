@@ -1,9 +1,3 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -14,10 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -27,31 +17,18 @@ body {
   height: 100%;
 }
 
-/*
-* Additional CSS can be defined below or in other CSS files, as per instructions
-*/
-
 main {
   width: 90%;
   margin: 0px auto;
   padding: 1.5em;
 }
 
-/*  because body-padding was screwing up my ahref/aname tags placement
+/*  because body-padding was screwing up with my ahref/aname tags placement
     and where the window stops when clicked
-    some purple from the header should be visible
+    some purple from the header should be visible (aesthetic choice)
  */
 .spacer {
   height: 120px;
-}
-
-/* just for my testing, so there's space at the bottom of the page */
-.spacer2 {
-  position: absolute;
-  top: 3000px;
-  height: 50px;
-  font-family: "Bungee", sans-serif;
-  color: #3b235c;
 }
 
 @media only screen and (min-width: 768px) {

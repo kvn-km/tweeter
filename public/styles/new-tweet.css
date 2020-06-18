@@ -9,14 +9,6 @@ form {
   flex-direction: column;
 }
 
-/* h2 {
-  margin: 0;
-  font-size: 1em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 100;
-  color: yellow;
-} */
-
 .new_tweet strong {
   font-weight: 700;
   color: #3b235c;
@@ -67,11 +59,6 @@ button {
 }
 
 #errorMSG {
-  /* color: #ce4590;
-  border: 0;
-  font-size: 0.5em;
-  font-family: "Bungee", sans-serif;
-  opacity: 100; */
   display: none;
 }
 

@@ -1,22 +1,21 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(() => {
   console.log("Yo. Doc's Ready!");
+
   // bring me back to the top of the page when clicking the logo
   $(".logo").on("click", function() {
     $(window).scrollTop(0);
   });
 
   function createTweet(tweet) {
-    // we need to conver the date to some more human
+
+    // we need to convert the date to something more human
+
     let dateCreatedAt = tweet.created_at;
     let dateRightNow = Date.now();
     let dateCreatedAgo = dateRightNow - dateCreatedAt;
-    // enter, The Date Converter 3000 !! 
+
+    // enter, The Date Converter 3000 !!
+
     function dateConverter3000(date) {
       let seconds = (date / 1000).toFixed(1);
       let minutes = (date / (1000 * 60)).toFixed(1);
@@ -69,8 +68,9 @@ $(document).ready(() => {
         }
       }
     }
+    //yea, that happened
 
-    // create elements
+    // generate elements
     let $tweet_container = $("<article>");
     let $tweet_profileContainer = $("<header>");
     let $tweet_profilePic = $("<span>");
@@ -86,7 +86,7 @@ $(document).ready(() => {
     let $tweet_iconFlag = $("<i>");
     let $tweet_iconRetweet = $("<i>");
     let $tweet_iconHeart = $("<i>");
-    // class and id assignment
+    // class assignment
     $tweet_container.addClass("a_tweet");
     $tweet_profilePic.addClass("profile_pic");
     $tweet_profileSocialName.addClass("profile_name");
@@ -151,7 +151,7 @@ $(document).ready(() => {
                 $("#tweet_text").val(""); // clear the text field
                 $(".counter").val("140"); // reset counter
                 $("#all_tweets").empty(); // clear the current tweet container
-                renderTweets(tweets, "#all_tweets"); // render tweets
+                renderTweets(tweets, "#all_tweets"); // re-render tweets
               });
           },
           function(err) { // if errors, throw errors

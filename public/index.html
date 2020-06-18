@@ -2,62 +2,54 @@
 <html lang="en">
 
 <head>
-  <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
-  <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-
-  <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweetsHover.css" type="text/css" />
-
-
-  <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/160f8d67bf.js" crossorigin="anonymous"></script>
-
-  <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script src="/scripts/composer-char-counter.js"></script>
-
-
 </head>
 
 <body>
   <div class="nav-container">
     <div class="spacer"></div>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
       <span class="tagline"><a href="#writeANewTweet"><strong>Write</strong>a new tweet<br><i id="header_icon" class="fas fa-angle-double-down mr-3"></i></a></span>
     </nav>
   </div>
 
+  <!--container to start responsive design-->
   <div id="responsive_design">
+
+    <!--first of two sections to create responsive design-->
     <div class="outer_container_one">
+
       <header class="profile">
         <div>
           <a id="writeANewTweet"></a>
-          <img class="main_profile_pic" src="/images/oooo.plus_115.png" alt="profile picture" width="175px" height="175px">
+          <img class="main_profile_pic" src="/images/oooo.plus_159.png" alt="profile picture" width="175px" height="175px">
         </div>
         <br>
         <div>
           <h2><strong>Sailor</strong>Moon</h2>
         </div>
       </header>
+
     </div>
 
     <div class="outer_container_two">
-      <!-- Page-specific (main) content here -->
+
       <main class="container">
 
+        <!-- compose tweet section -->
         <section class="new_tweet">
           <form action="/tweets/" method="POST">
             <textarea name="text" id="tweet_text" placeholder="What are you humming about?"></textarea>
@@ -72,16 +64,7 @@
         </section>
 
         <section id="all_tweets">
-          <!-- kept for the icons and buttons i might want to use later -->
-          <!-- <span class="social_icons"> -->
-          <!-- <i class="icons far fa-flag"></i> -->
-          <!-- <i class="icons fas fa-flag"></i> -->
-          <!-- <i class="icons fas fa-circle-notch"></i> -->
-          <!-- <i class="icons fas fa-circle"></i> -->
-          <!-- <i class="icons fas fa-reply"></i> -->
-          <!-- <i class="icons far fa-heart"></i> -->
-          <!-- <i class="icons fas fa-heart"></i> -->
-          <!-- </span> -->
+          <!-- tweets go here -->
         </section>
 
       </main>
