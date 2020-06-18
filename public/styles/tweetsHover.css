@@ -96,6 +96,11 @@ article:hover {
   box-shadow: 5px 5px #755d96;
   /* box-shadow: 5px 5px yellow; */
 }
+/* can't decide whether i like it yellow or purple. yellow def looks better, but a bit hard on eyes.*/
+article:hover hr {
+  background-color: yellow;
+  /* background-color: #755d96; */
+}
 
 article:hover header {
   opacity: 100%;
@@ -116,9 +121,4 @@ article:hover footer {
 article:hover .icons {
   margin: 0 4px;
   color: rgb(69, 212, 134);
-}
-
-article:hover hr {
-  background-color: yellow;
-  /* background-color: #755d96; */
 }

@@ -6,15 +6,17 @@
 
 $(document).ready(() => {
   console.log("Yo. Doc's Ready!");
-
+  // bring me back to the top of the page when clicking the logo
   $(".logo").on("click", function() {
     $(window).scrollTop(0);
   });
 
   function createTweet(tweet) {
+    // we need to conver the date to some more human
     let dateCreatedAt = tweet.created_at;
     let dateRightNow = Date.now();
     let dateCreatedAgo = dateRightNow - dateCreatedAt;
+    // enter, The Date Converter 3000 !! 
     function dateConverter3000(date) {
       let seconds = (date / 1000).toFixed(1);
       let minutes = (date / (1000 * 60)).toFixed(1);
@@ -137,7 +139,7 @@ $(document).ready(() => {
   $("form").submit(function() {
     event.preventDefault();
     let tweetTextSample = $("#tweet_text").val();
-    if (tweetTextSample.length > 140) {
+    if (tweetTextSample.length > 140) { // REF: 1. Throw error if tweet is too long. 
       $("[id=errorMSG]").animate({ "margin-left": "15px", "opacity": "100" });
     } else if (tweetTextSample.length > 0 && tweetTextSample.length <= 140) {
       let theTweet = $(this).serialize();
@@ -146,29 +148,26 @@ $(document).ready(() => {
           function() {
             getTweets()
               .then((tweets) => {
-                $("#tweet_text").val("");
-                $("#all_tweets").empty();
-                renderTweets(tweets, "#all_tweets");
+                $("#tweet_text").val(""); // clear the text field
+                $("#all_tweets").empty(); // clear the current tweet container
+                renderTweets(tweets, "#all_tweets"); // render tweets
               });
           },
-          function(err) {
+          function(err) { // if errors, throw errors
             console.error("POST FAIL", error);
           }
         );
     }
   });
 
+  // page load get tweets
   getTweets()
     .then(response => { renderTweets(response, "#all_tweets"); })
     .fail(error => { console.log("Initial GET Fail", error); });
 
+  // REF: 1. if error was thrown, remove it when the textarea is being adjusted
   $("[id=tweet_text]").on("input", function() {
     $("[id=errorMSG]").animate({ "margin-left": "120px", "opacity": "0" });
   });
-
-
-
-
-
 
 });

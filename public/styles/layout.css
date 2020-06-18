@@ -30,18 +30,18 @@ body {
 * Additional CSS can be defined below or in other CSS files, as per instructions
 */
 
+main {
+  width: 90%;
+  margin: 0px auto;
+  padding: 1.5em;
+}
+
 /*  because body-padding was screwing up my ahref/aname tags placement
     and where the window stops when clicked
     some purple from the header should be visible
  */
 .spacer {
   height: 120px;
-}
-
-main {
-  width: 90%;
-  margin: 0px auto;
-  padding: 1.5em;
 }
 
 /* just for my testing, so there's space at the bottom of the page */
