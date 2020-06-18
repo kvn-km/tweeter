@@ -80,15 +80,26 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
-  body {
-    font-size: 50px;
+  main {
+    width: 90%;
+    margin: 0px auto;
+    padding: 1.5em;
   }
 
-  .tagline {
-    font-size: 0.88em;
+  #responsive_design {
+    margin-top: -50px;
   }
 
-  strong {
-    font-weight: 100;
+  .spacer {
+    height: 120px;
   }
+
+  .spacer2 {
+    position: absolute;
+    top: 3000px;
+    height: 50px;
+    font-family: "Bungee", sans-serif;
+    color: #3b235c;
+  }
+}
 }
