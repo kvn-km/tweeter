@@ -1,55 +1,57 @@
-nav {
-  background: #ce4590;
-  height: 120px;
-  width: 100%;
-  color: #ffffff;
-  padding: 1.5em;
-  display: flex;
-  justify-content: space-between;
-  background-image: url("../images/inspiration-geometry.png");
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 999;
-}
+@media only screen and (min-width: 768px) {
+  nav {
+    background: #ce4590;
+    height: 120px;
+    width: 100%;
+    color: #ffffff;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../images/inspiration-geometry.png");
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+  }
 
-span {
-  display: flex;
-  align-items: center;
-}
+  span {
+    display: flex;
+    align-items: center;
+  }
 
-strong {
-  margin-right: 0.3em;
-  color: rgb(69, 212, 134);
-  font-weight: 600;
-}
+  strong {
+    margin-right: 0.3em;
+    color: rgb(69, 212, 134);
+    font-weight: 600;
+  }
 
-.logo {
-  font-family: "Bungee", sans-serif;
-}
+  .logo {
+    font-family: "Bungee", sans-serif;
+  }
 
-.tagline {
-  font-size: 1em;
-  color: yellow;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 100;
-  height: 25px;
-}
+  .tagline {
+    font-size: 1em;
+    color: yellow;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 100;
+    height: 25px;
+  }
 
-a {
-  height: 0;
-  text-decoration: none;
-  font-size: 1em;
-  color: yellow;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 100;
-}
+  a {
+    height: 0;
+    text-decoration: none;
+    font-size: 1em;
+    color: yellow;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 100;
+  }
 
-#header_icon {
-  padding-left: 20px;
-  transition: margin-top 0.5s;
-}
+  #header_icon {
+    padding-left: 20px;
+    transition: margin-top 0.5s;
+  }
 
-.tagline:hover #header_icon {
-  margin-top: 10px;
+  .tagline:hover #header_icon {
+    margin-top: 10px;
+  }
 }

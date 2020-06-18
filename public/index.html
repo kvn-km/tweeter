@@ -31,54 +31,63 @@
 </head>
 
 <body>
-  <div class="spacer"></div>
-  <!-- Top nav bar (fixed) -->
-  <nav>
-    <span class="logo">tweeter</span>
-    <span class="tagline"><a href="#writeANewTweet"><strong>Write</strong>a new tweet<br><i id="header_icon" class="fas fa-angle-double-down mr-3"></i></a></span>
-  </nav>
+  <div class="nav-container">
+    <div class="spacer"></div>
+    <!-- Top nav bar (fixed) -->
+    <nav>
+      <span class="logo">tweeter</span>
+      <span class="tagline"><a href="#writeANewTweet"><strong>Write</strong>a new tweet<br><i id="header_icon" class="fas fa-angle-double-down mr-3"></i></a></span>
+    </nav>
+  </div>
 
-  <header class="profile">
-    <div>
-      <a name="writeANewTweet"></a>
-      <img class="main_profile_pic" src="/images/oooo.plus_115.png" alt="profile picture" width="175px" height="175px">
-    </div>
-    <br>
-    <div>
-      <h2><strong>Sailor</strong>Moon</h2>
-    </div>
-  </header>
-
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-
-    <section class="new_tweet">
-      <form action="/tweets/" method="POST">
-        <textarea name="text" id="tweet_text" placeholder="What are you humming about?"></textarea>
-        <div class="submit_tweet">
-          <span>
-            <button type="submit">Tweet</button>
-            <span id="errorMSG">Take a chill pill!</span>
-          </span>
-          <output name="counter" class="counter" for="tweet_text">140</output>
+  <div id="responsive_design">
+    <div class="outer_container_one">
+      <header class="profile">
+        <div>
+          <a id="writeANewTweet"></a>
+          <img class="main_profile_pic" src="/images/oooo.plus_115.png" alt="profile picture" width="175px" height="175px">
         </div>
-      </form>
-    </section>
+        <br>
+        <div>
+          <h2><strong>Sailor</strong>Moon</h2>
+        </div>
+      </header>
+    </div>
 
-    <section id="all_tweets">
-      <!-- kept for the icons and buttons i might want to use later -->
-      <!-- <span class="social_icons"> -->
-      <!-- <i class="icons far fa-flag"></i> -->
-      <!-- <i class="icons fas fa-flag"></i> -->
-      <!-- <i class="icons fas fa-circle-notch"></i> -->
-      <!-- <i class="icons fas fa-circle"></i> -->
-      <!-- <i class="icons fas fa-reply"></i> -->
-      <!-- <i class="icons far fa-heart"></i> -->
-      <!-- <i class="icons fas fa-heart"></i> -->
-      <!-- </span> -->
-    </section>
+    <div class="outer_container_two">
+      <!-- Page-specific (main) content here -->
+      <main class="container">
 
-  </main>
+        <section class="new_tweet">
+          <form action="/tweets/" method="POST">
+            <textarea name="text" id="tweet_text" placeholder="What are you humming about?"></textarea>
+            <div class="submit_tweet">
+              <span>
+                <button type="submit">Tweet</button>
+                <span id="errorMSG">Take a chill pill!</span>
+              </span>
+              <output name="counter" class="counter" for="tweet_text">140</output>
+            </div>
+          </form>
+        </section>
+
+        <section id="all_tweets">
+          <!-- kept for the icons and buttons i might want to use later -->
+          <!-- <span class="social_icons"> -->
+          <!-- <i class="icons far fa-flag"></i> -->
+          <!-- <i class="icons fas fa-flag"></i> -->
+          <!-- <i class="icons fas fa-circle-notch"></i> -->
+          <!-- <i class="icons fas fa-circle"></i> -->
+          <!-- <i class="icons fas fa-reply"></i> -->
+          <!-- <i class="icons far fa-heart"></i> -->
+          <!-- <i class="icons fas fa-heart"></i> -->
+          <!-- </span> -->
+        </section>
+
+      </main>
+    </div>
+  </div>
+
 </body>
 
 </html>

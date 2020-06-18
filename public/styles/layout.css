@@ -6,6 +6,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -23,7 +24,7 @@ body {
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
   background-image: url("../images/inspiration-geometry.png");
-  /* padding-top: 120px; */
+  height: 100%;
 }
 
 /*
@@ -51,4 +52,43 @@ main {
   height: 50px;
   font-family: "Bungee", sans-serif;
   color: #3b235c;
+}
+
+@media only screen and (min-width: 768px) {
+  #responsive_design {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .outer_container_one {
+    width: 30%;
+  }
+
+  header {
+    height: 100%;
+  }
+
+  .outer_container_two {
+    width: 70%;
+  }
+
+  #writeANewTweet {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 50px;
+  }
+
+  .tagline {
+    font-size: 0.88em;
+  }
+
+  strong {
+    font-weight: 100;
+  }
 }

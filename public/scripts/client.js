@@ -149,6 +149,7 @@ $(document).ready(() => {
             getTweets()
               .then((tweets) => {
                 $("#tweet_text").val(""); // clear the text field
+                $(".counter").val("140"); // reset counter
                 $("#all_tweets").empty(); // clear the current tweet container
                 renderTweets(tweets, "#all_tweets"); // render tweets
               });

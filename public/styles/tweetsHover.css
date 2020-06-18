@@ -1,124 +1,126 @@
-#all_tweets {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2em;
-}
+@media only screen and (min-width: 768px) {
+  #all_tweets {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+  }
 
-article {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5em 0.5em 0em 0.5em;
-  margin: 1em 0;
-  border-width: 3px;
-  border-color: #545149;
-  border-style: solid;
-  background: transparent;
-  font-size: 0.75em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  transition: opacity 0.25s;
-  transition: box-shadow 0.25s;
-}
+  article {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.5em 0em 0.5em;
+    margin: 1em 0;
+    border-width: 3px;
+    border-color: #545149;
+    border-style: solid;
+    background: transparent;
+    font-size: 0.75em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    transition: opacity 0.25s;
+    transition: box-shadow 0.25s;
+  }
 
-article header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  opacity: 33%;
-  transition: opacity 0.25s;
-}
+  article header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 33%;
+    transition: opacity 0.25s;
+  }
 
-article img {
-  margin-right: 10px;
-  transition: opacity 0.25s;
-}
+  article img {
+    margin-right: 10px;
+    transition: opacity 0.25s;
+  }
 
-h3 {
-  margin: 0;
-  font-size: 1em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  color: #545149;
-  transition: opacity 0.25s;
-}
+  h3 {
+    margin: 0;
+    font-size: 1em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    color: #545149;
+    transition: opacity 0.25s;
+  }
 
-h4 {
-  margin: 0;
-  font-size: 1em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  color: #ce4590;
-  opacity: 0%;
-  transition: opacity 0.5s;
-}
+  h4 {
+    margin: 0;
+    font-size: 1em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    color: #ce4590;
+    opacity: 0%;
+    transition: opacity 0.5s;
+  }
 
-article p {
-  padding: 10px;
-  font-weight: 600;
-  color: #545149;
-  opacity: 33%;
-  transition: opacity 0.25s;
-}
+  article p {
+    padding: 10px;
+    font-weight: 600;
+    color: #545149;
+    opacity: 33%;
+    transition: opacity 0.25s;
+  }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 0px 5px 0px;
-  padding: 0.6em;
-  border-width: 0px;
-  font-size: 0.75em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  opacity: 33%;
-  transition: opacity 0.25s;
-}
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 5px 0px;
+    padding: 0.6em;
+    border-width: 0px;
+    font-size: 0.75em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    opacity: 33%;
+    transition: opacity 0.25s;
+  }
 
-.icons {
-  margin: 0 4px;
-  color: #545149;
-  transition: color 0.25s;
-  transition: opacity 0.25s;
-}
+  .icons {
+    margin: 0 4px;
+    color: #545149;
+    transition: color 0.25s;
+    transition: opacity 0.25s;
+  }
 
-hr {
-  display: block;
-  border: 0;
-  height: 3px;
-  margin: 0;
-  background-color: #545149;
-  transition: color 0.25s;
-}
+  hr {
+    display: block;
+    border: 0;
+    height: 3px;
+    margin: 0;
+    background-color: #545149;
+    transition: color 0.25s;
+  }
 
-article:hover {
-  box-shadow: 5px 5px #755d96;
-  /* box-shadow: 5px 5px yellow; */
-}
-/* can't decide whether i like it yellow or purple. yellow def looks better, but a bit hard on eyes.*/
-article:hover hr {
-  background-color: yellow;
-  /* background-color: #755d96; */
-}
+  article:hover {
+    box-shadow: 5px 5px #755d96;
+    /* box-shadow: 5px 5px yellow; */
+  }
+  /* can't decide whether i like it yellow or purple. yellow def looks better, but a bit hard on eyes.*/
+  article:hover hr {
+    background-color: yellow;
+    /* background-color: #755d96; */
+  }
 
-article:hover header {
-  opacity: 100%;
-}
+  article:hover header {
+    opacity: 100%;
+  }
 
-article:hover h4 {
-  opacity: 100%;
-}
+  article:hover h4 {
+    opacity: 100%;
+  }
 
-article:hover p {
-  opacity: 100%;
-}
+  article:hover p {
+    opacity: 100%;
+  }
 
-article:hover footer {
-  opacity: 100%;
-}
+  article:hover footer {
+    opacity: 100%;
+  }
 
-article:hover .icons {
-  margin: 0 4px;
-  color: rgb(69, 212, 134);
+  article:hover .icons {
+    margin: 0 4px;
+    color: rgb(69, 212, 134);
+  }
 }
