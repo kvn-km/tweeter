@@ -1,17 +1,22 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, responsive, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This repo is to practice HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, Express and MongoDB back-end skills.
 
-## Getting Started
+### Final Product Screen Shots
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+!["80's TWEETER by kvn-km"](https://github.com/kvn-km/tweeter/blob/master/public/images/screenshots/tweeter_kvn-km_1.png?raw=true)\
+!["Responsive Design - Tablet Size"](https://github.com/kvn-km/tweeter/blob/master/public/images/screenshots/tweeter_kvn-km_2.png?raw=true)\
+!["Responsive Design - Mobile Size"](https://github.com/kvn-km/tweeter/blob/master/public/images/screenshots/tweeter_kvn-km_3.png?raw=true)\
+!["Create your own tubular tweet!"](https://github.com/kvn-km/tweeter/blob/master/public/images/screenshots/tweeter_kvn-km_4.png?raw=true)\
+!["Better keep your gnarly tweets to the 140 character limit!"](https://github.com/kvn-km/tweeter/blob/master/public/images/screenshots/tweeter_kvn-km_5.png?raw=true)\
+!["Feast your eyes on some rad hover and transition effects!"](https://github.com/kvn-km/tweeter/blob/master/public/images/screenshots/tweeter_kvn-km_6.png?raw=true)\
 
-## Dependencies
+#### Dependencies
 
 - Express
 - Node 5.10.x or above
+- MD5
+- body-parser
+- change
