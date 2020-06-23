@@ -9,8 +9,6 @@ nav {
   align-items: center;
   background-image: url("../images/inspiration-geometry.png");
   position: fixed;
-  top: 0px;
-  left: 0px;
   z-index: 1; /* 1-100, 1 lowest layer */
 }
 

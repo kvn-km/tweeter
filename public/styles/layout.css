@@ -27,9 +27,9 @@ main {
     and where the window stops when clicked
     some purple from the header should be visible (aesthetic choice)
  */
-.spacer {
+/* .spacer {
   height: 120px;
-}
+} */
 
 @media only screen and (min-width: 768px) {
   #responsive_design {
@@ -67,15 +67,15 @@ main {
     margin-top: -50px;
   }
 
-  .spacer {
+  /* .spacer {
     height: 120px;
-  }
+  } */
 
-  .spacer2 {
+  /* .spacer2 {
     position: absolute;
     top: 3000px;
     height: 50px;
     font-family: "Bungee", sans-serif;
     color: #3b235c;
-  }
+  } */
 }
