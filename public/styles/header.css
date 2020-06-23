@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 50px 0;
+  margin-top: 4rem;
+  padding: 3rem 0 2rem 0;
   background-color: #3b235c;
   background-image: url("../images/inspiration-geometry.png");
   color: rgb(69, 212, 134);
@@ -23,4 +24,10 @@ strong {
   margin-right: 0.3em;
   color: rgb(69, 212, 134);
   font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+  .profile {
+    margin-top: 7rem;
+  }
 }

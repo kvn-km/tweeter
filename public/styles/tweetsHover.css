@@ -9,7 +9,7 @@ article {
   flex-direction: column;
   padding: 0.5em 0.5em 0em 0.5em;
   margin: 1em 0;
-  border-width: 3px;
+  border-width: 0.2rem;
   border-color: #545149;
   border-style: solid;
   background: transparent;
@@ -32,7 +32,7 @@ article header {
 }
 
 article img {
-  margin-right: 10px;
+  margin-right: 0.65rem;
   transition: opacity 0.25s;
 }
 
@@ -52,12 +52,12 @@ h4 {
   font-weight: 600;
   color: #ce4590;
   opacity: 0%;
-  margin-left: 5px;
+  margin-left: 0.3rem;
   transition: opacity 0.5s;
 }
 
 article p {
-  padding: 0 10px 10px 10px;
+  padding: 0 0.65rem 0.65rem 0.65rem;
   font-weight: 600;
   color: #545149;
   opacity: 33%;
@@ -67,9 +67,9 @@ article p {
 footer {
   display: flex;
   justify-content: space-between;
-  margin: 0px 0px 5px 0px;
+  margin: 0 0 0.3rem 0;
   padding: 0.6em;
-  border-width: 0px;
+  border-width: 0;
   font-size: 0.75em;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -78,7 +78,7 @@ footer {
 }
 
 .icons {
-  margin: 0 2px;
+  margin: 0 0.125rem;
   color: #545149;
   transition: color 0.25s;
   transition: opacity 0.25s;
@@ -87,20 +87,18 @@ footer {
 hr {
   display: block;
   border: 0;
-  height: 3px;
+  height: 0.2rem;
   margin: 0;
   background-color: #545149;
   transition: color 0.25s;
 }
 
 article:hover {
-  box-shadow: 5px 5px #755d96;
-  /* box-shadow: 5px 5px yellow; */
+  box-shadow: 0.3rem 0.3rem #755d96;
 }
-/* can't decide whether i like it yellow or purple. yellow def looks better, but a bit hard on eyes.*/
+
 article:hover hr {
   background-color: yellow;
-  /* background-color: #755d96; */
 }
 
 article:hover header {
@@ -133,15 +131,15 @@ article:hover .icons {
   }
 
   article p {
-    padding: 10px;
+    padding: 0.65rem;
   }
 
   .icons {
-    margin: 0 4px;
+    margin: 0 0.25rem;
   }
 
   article:hover .icons {
-    margin: 0 4px;
+    margin: 0 0.25rem;
     color: rgb(69, 212, 134);
   }
 }

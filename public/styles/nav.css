@@ -9,7 +9,8 @@ nav {
   align-items: center;
   background-image: url("../images/inspiration-geometry.png");
   position: fixed;
-  z-index: 1; /* 1-100, 1 lowest layer */
+  top:0;
+  z-index: 1 /* 1-100, 1 lowest layer */
 }
 
 span {
@@ -45,7 +46,7 @@ a {
 }
 
 .tagline:hover #header_icon {
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -87,6 +88,6 @@ a {
   }
 
   .tagline:hover #header_icon {
-    margin-top: 10px;
+    margin-top: 0.5rem;
   }
 }
