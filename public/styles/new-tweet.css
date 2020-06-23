@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: -9rem;
+  opacity: 0;
+  z-index: -1; /* lowest layers */
 }
 
 form {

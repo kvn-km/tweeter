@@ -8,6 +8,7 @@
   background-color: #3b235c;
   background-image: url("../images/inspiration-geometry.png");
   color: rgb(69, 212, 134);
+  z-index: 5; /* highest layers */
 }
 
 h2 {

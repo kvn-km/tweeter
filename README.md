@@ -37,3 +37,10 @@ This repo is to practice HTML, CSS, JS, jQuery and AJAX front-end skills, and No
 - MD5
 - body-parser
 - change
+
+### Installaton / Startup Instructions
+
+- Fork this repository and clone the fork to your local machine
+- Install dependencies using `npm install`
+- You can start the server on post 8080 using `npm run local`
+- In your browser, goto http://localhost:8080

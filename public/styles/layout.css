@@ -52,7 +52,7 @@ main {
   }
 
   #writeANewTweet {
-    display: none;
+    /* display: none; */
   }
 }
 

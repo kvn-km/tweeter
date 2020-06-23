@@ -4,12 +4,14 @@ nav {
   width: 100%;
   color: #ffffff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-image: url("../images/inspiration-geometry.png");
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 999;
+  z-index: 1; /* 1-100, 1 lowest layer */
 }
 
 span {
@@ -22,13 +24,37 @@ span {
 }
 
 .tagline {
-  display: none;
+  display: flex;
+  font-size: 1rem;
+  color: yellow;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
+  height: 1.5rem;
+}
+
+a {
+  height: 0;
+  text-decoration: none;
+  font-size: 1em;
+  color: yellow;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
+}
+
+#header_icon {
+  padding-right: 0.75rem;
+  transition: margin-top 0.5s;
+}
+
+.tagline:hover #header_icon {
+  margin-top: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   nav {
     height: 120px;
     padding: 1.5em;
+    flex-direction: row;
     justify-content: space-between;
     position: fixed;
   }
@@ -41,7 +67,7 @@ span {
 
   .tagline {
     display: flex;
-    font-size: 1em;
+    font-size: 1.5rem;
     color: yellow;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 100;
