@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <div class="nav-container">
+  <div class="nav_container">
     <nav>
       <span class="logo">tweeter</span>
       <span class="tagline"><i id="header_icon" class="fas fa-angle-double-down mr-3"></i><strong>Write</strong>a new tweet</span>
@@ -56,11 +56,13 @@
           <form action="/tweets/" method="POST">
             <textarea name="text" id="tweet_text" placeholder="What are you humming about?"></textarea>
             <div class="submit_tweet">
-              <span>
+              <span class="validation">
                 <button type="submit">Tweet</button>
-                <span id="errorMSG">Take a chill pill!</span>
+                <output name="counter" class="counter" for="tweet_text">140</output>
               </span>
-              <output name="counter" class="counter" for="tweet_text">140</output>
+              <span id="errorMSG">
+                <span class="errorMSG">Bogus Tweet!</span>
+              </span>
             </div>
           </form>
         </section>

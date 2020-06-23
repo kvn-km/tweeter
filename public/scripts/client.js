@@ -3,7 +3,7 @@
 $(document).ready(() => {
   console.log("Yo. Doc's Ready!");
 
-  // make sure textarea is hidden at start
+  // REF: 1. Make sure textarea is hidden at start
   $(".new_tweet").toggleClass("visible");
 
   // bring me back to the top of the page when clicking the logo
@@ -11,6 +11,7 @@ $(document).ready(() => {
     $(window).scrollTop(0);
   });
 
+  // REF: 1. Compose tweet un/hide feature
   $(".tagline").click(function() {
     if ($(".new_tweet").hasClass("visible")) {
       $(".new_tweet").animate({ "margin-top": "-9rem", "opacity": "0" });
@@ -26,8 +27,8 @@ $(document).ready(() => {
   $("form").submit(function() {
     event.preventDefault();
     let tweetTextSample = $("#tweet_text").val();
-    if (tweetTextSample.length > 140) { // REF: 1. Throw error if tweet is too long. 
-      $("[id=errorMSG]").animate({ "margin-left": "15px", "opacity": "100" });
+    if (tweetTextSample.length > 140 || tweetTextSample.length === 0) { // REF: 2. Throw error if tweet is too long. 
+      $("[class=errorMSG]").animate({ "margin-left": "0rem", "opacity": "100" });
     } else if (tweetTextSample.length > 0 && tweetTextSample.length <= 140) {
       let theTweet = $(this).serialize();
       $.post("/tweets/", theTweet)
@@ -53,9 +54,9 @@ $(document).ready(() => {
     .then(response => { renderTweets(response, "#all_tweets"); })
     .catch(error => { console.log("Initial GET Fail", error); });
 
-  // REF: 1. if error was thrown, remove it when the textarea is being adjusted
+  // REF: 2. if error was thrown, remove it when the textarea is being adjusted
   $("[id=tweet_text]").on("input", function() {
-    $("[id=errorMSG]").animate({ "margin-left": "120px", "opacity": "0" });
+    $("[class=errorMSG]").animate({ "margin-left": "15rem", "opacity": "0" });
   });
 
 });
